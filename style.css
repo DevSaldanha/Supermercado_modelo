@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1080px;
+  padding: 10px 24px;
+  max-width: 100%;
+}
+
+header .logo-title {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  height: 60px;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+/* Media query to show the hamburger menu and hide the main navigation */
+@media (max-width: 850px) {
+  header {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 79px;
+    left: 0;
+    background: #f5f5f5;
+    width: 100vw;
+    padding: 24px 8px;
+    border-top: 1px solid black;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    gap: 15px;
+  }
+
+  .main-nav ul li {
+    padding: 0;
+  }
+}
+
+.card-produto img {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  border: 2px solid #005d9b;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card-produto button {
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 36px;
+}
+
+@media only screen and (max-width: 370px) {
+  .logo {
+    display: none;
+  }
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 22px;
+}
+
+main {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1080px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.fixed-bg {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background-image: url("./Imagens/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: opacity(0.5) blur(3px);
+}
+
+.secao-produtos h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.secao-produtos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding: 0 24px;
+}
+
+.secao-produtos-lista {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  gap: 20px;
+}
+
+.card-produto {
+  width: 200px;
+  height: 350px;
+}
+
+@media screen and (max-width: 1200px) {
+  .secao-produtos-lista {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .secao-produtos-lista {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .secao-produtos-lista {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secao-produtos-lista {
+    grid-template-columns: repeat(1, 200px);
+  }
+}
+
+figcaption {
+  color: #005d9b;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.valor {
+  width: 60%;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #ca3507;
+  text-align: center;
+}
+
+section#contato {
+  width: 480px;
+  max-width: 100%;
+}
+
+section#contato form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  max-width: 100%;
+}
+
+section#contato h2 {
+  margin: 12px 0;
+}
+
+section#contato form input,
+textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+}
+
+section#contato button {
+  width: 100%;
+  cursor: pointer;
+  height: 38px;
+}
+
+div.integrantes ul {
+  list-style-type: none;
+  padding-bottom: 24px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #005d9b;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  max-width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+.social-icons {
+  display: inline-block;
+}
+
+.social-icons i {
+  color: white;
+  font-size: 36px;
+  margin: 12px 10px 24px;
+}
